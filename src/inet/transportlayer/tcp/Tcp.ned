@@ -172,6 +172,7 @@ simple Tcp like ITcp
         double stopOperationTimeout @unit(s) = default(2s);    // Timeout value for lifecycle stop operation
         bool ecnWillingness = default(false); // True if willing to use ECN
         double dctcpGamma = default(0.0625); // A fixed estimation gain for calculating dctcp_alpha (RFC 8257 4.2)
+        double rackLossDetectionFraction = default(0.25);
         @display("i=block/wheelbarrow");
         @signal[tcpConnectionAdded];
         @signal[tcpConnectionRemoved];
